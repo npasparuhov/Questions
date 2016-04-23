@@ -1,0 +1,39 @@
+<ion-view title="Questions">
+  <ion-nav-buttons side="right">
+    <button class="button button-positive button-clear" ng-click="goTo()">Galery</button>
+  </ion-nav-buttons>
+  <ion-content has-header="true">
+    <ion-slide-box show-pager="false" on-slide-changed="show()" slider="slider">
+      <ion-slide ng-repeat="card in $root.questions">
+                  <div class="list card">
+      
+                    <a class="item item-text-wrap text-center">
+                      <h3>{{card.title}}</h3>
+                    </a>
+
+                    <div class="item text-center" ng-show="card.id == 0 ? true : false">
+                    <button class="button-positive button" ng-click="save(false)">
+                      Next
+                    </button>
+                    </div>
+      
+                    <div class="item text-center" ng-show="card.id != 0 ? true : false">
+                    {{$root.answeredQuestions}}/12
+                    <button class="button-balanced button" ng-class="card.answer == 'yes' ? 'active' : ''" ng-click="card.answer = 'yes'; save('yes')">
+                      Yes
+                    </button>
+      
+                    <button class="button-assertive button" ng-class="card.answer == 'no' ? 'active' : ''" ng-click="card.answer = 'no'; save('no')">
+                      No
+                    </button>
+                    </div>
+      
+                  </div>
+  
+      </ion-slide>
+    </ion-slide-box>
+  </ion-content>
+  <ion-footer-bar align-title="center" class="bar-assertive" ng-controller="HeaderCtrl" ng-click="end()">
+      <h1 class="title">END</h1>
+    </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,64 @@
+<ion-view title="Gallery">
+  <ion-nav-buttons side="left">
+    <button class="button button-positive button-clear" ng-click="goTo()">Back</button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <a class="button button-positive button-clear" onclick="window.open('https://simpledb.firebaseapp.com', '_system', 'location=yes')" href="#">TheSite</a>
+  </ion-nav-buttons>
+  <ion-content has-header="true">
+
+    <div class="list card">
+      
+      <a class="item item-text-wrap text-center">
+        <h3>Login</h3>
+      </a>
+      
+      <div class="item item-image">
+        <img class="item" src="img/login.png">
+      </div>
+      
+    </div>
+
+    <div class="list card">
+      
+      <a class="item item-text-wrap text-center">
+        <h3>New Room</h3>
+      </a>
+      
+      <div class="item item-image">
+        <img class="item" src="img/newRoom.png">
+      </div>
+      
+    </div>
+
+    <div class="list card">
+      
+      <a class="item item-text-wrap text-center">
+        <h3>AC Remote</h3>
+      </a>
+      
+      <div class="item item-image">
+        <img class="item" src="img/ACRemote.png">
+      </div>
+      
+    </div>
+
+
+    <div class="list card">
+      
+      <a class="item item-text-wrap text-center">
+        <h3>Stream</h3>
+      </a>
+      
+      <div class="item item-image">
+        <img class="item" src="img/stream.jpg">
+      </div>
+      
+    </div>
+
+    <div align="center" style="margin-bottom: 30px">
+      <button class="button-balanced button" ng-click="transferData()">Transfer Data</button>
+    </div>
+
+  </ion-content>
+</ion-view>
